@@ -36,6 +36,16 @@ export const navItems = [
       img: "",
       spareImg: "",
     },
+    // {
+    //   id: 3,
+    //   title: "Tech enthusiast with a passion development.",
+    //   description: "I constantly try to improve",
+    //   className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    //   imgClassName: "",
+    //   titleClassName: "justify-start",
+    //   img: "",
+    //   spareImg: "",
+    // },
     {
       id: 4,
       title: "Tech enthusiast with a passion for development.",
