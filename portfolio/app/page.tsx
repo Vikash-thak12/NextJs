@@ -9,7 +9,7 @@ export default function Home() {
       <div className="max-w-7xl w-full pb-10">
         <FloatingNav navItems={[
           { name: "Home", link: '/', icon: <FaHome /> },
-          { name: "about", link: '/about', icon: <FaHome /> }
+          { name: "about", link: '/', icon: <FaHome /> }
         ]} />
         <Hero />
         <Grid />

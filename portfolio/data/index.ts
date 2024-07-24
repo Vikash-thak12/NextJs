@@ -9,7 +9,7 @@ export const navItems = [
     {
       id: 1,
       title: "I prioritize client collaboration, fostering open communication ",
-      description: "",
+      description: "I constantly try to improve",
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "w-full h-full",
       titleClassName: "justify-end",
@@ -21,7 +21,7 @@ export const navItems = [
       title: "I'm very flexible with time zone communications",
       description: "",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-      imgClassName: "",
+      imgClassName: "I constantly try to improve",
       titleClassName: "justify-start",
       img: "",
       spareImg: "",
@@ -39,7 +39,7 @@ export const navItems = [
     {
       id: 4,
       title: "Tech enthusiast with a passion for development.",
-      description: "",
+      description: "I constantly try to improve",
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
       titleClassName: "justify-start",
