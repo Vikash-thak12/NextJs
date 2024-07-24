@@ -1,7 +1,14 @@
+"use client"
+
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { Globe } from "./Globe";
 import { GlobeDemo } from "./GridGlobe";
+import Lottie from "react-lottie";
+import { useState } from "react";
+import animationData from "@/data/animationdata.json"
+import MagicButton from "./MagicButton";
+import { IoCopyOutline } from "react-icons/io5";
 
 export const BentoGrid = ({
   className,
@@ -42,6 +49,11 @@ export const BentoGridItem = ({
   img?: string
   spareImg?: string
 }) => {
+  const [copied, setCopied] = useState(false)
+  const handlecopy = () => {
+    navigator.clipboard.writeText('thakvikash622@gmail.com')  // this is going to copy my gmail
+    setCopied(true)
+  }
   return (
     <div
       className={cn(
@@ -92,7 +104,7 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 text-left">
             {description}
           </div>
-          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 text-left">
+          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
             {title}
           </div>
           {
@@ -125,11 +137,29 @@ export const BentoGridItem = ({
             )
           }
 
-          {/* {
-            id === 6 (
-
+          {
+            id === 6 && (
+              <div className="mt-5 relative">
+                <div className={`absolute -bottom-5 right-0`}>
+                  <Lottie options={{
+                    loop: copied,
+                    autoplay: copied,
+                    animationData: animationData,
+                    rendererSettings: {
+                      preserveAspectRatio: "xMidYMid slice",
+                    }
+                  }} />
+                </div>
+                <MagicButton
+                title={copied ? "Email copied" : "Copy my Email"}
+                icon= {<IoCopyOutline />}
+                position="left"
+                otherClasses="!bg-[#161a31]"
+                handleClick={handlecopy}
+                 />
+              </div>
             )
-          } */}
+          }
         </div>
       </div >
     </div>
