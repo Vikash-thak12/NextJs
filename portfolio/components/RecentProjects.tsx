@@ -1,11 +1,11 @@
 import { projects } from "@/data"
-import { PinContainer } from "./ui/3d-Pin"
+import { PinContainer } from "./ui/3d-pin"
 import { FaLocationArrow } from "react-icons/fa"
 
 
 const RecentProjects = () => {
     return (
-        <div className="py-20" id="projects">
+        <div className="py-10" id="projects">
             <h1 className="heading">A Small Collection of {''}
                 <span className="text-purple">
                     Recent Projects
