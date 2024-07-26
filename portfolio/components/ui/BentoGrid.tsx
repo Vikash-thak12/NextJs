@@ -104,9 +104,20 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 text-left">
             {description}
           </div>
-          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
-            {title}
-          </div>
+          {
+            id !== 6 && (
+              <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
+                {title}
+              </div>
+            )
+          }
+          {
+            id === 6 && (
+              <div className="font-sans font-bold text-center text-lg lg:text-3xl w-full z-10">
+                {title}
+              </div>
+            )
+          }
           {
             id === 2 && <GlobeDemo />
           }
@@ -115,7 +126,7 @@ export const BentoGridItem = ({
               <div className="flex gap-3 w-fit absolute lg:top-5 right-5">
                 <div className="flex flex-col gap-2 lg:gap-2">
                   {["NextJs", "ReactJs", "TypeScript"].map(
-                    (item) => ( 
+                    (item) => (
                       <span key={item} className="py-1 px-2 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                         {item}
                       </span>
@@ -124,9 +135,9 @@ export const BentoGridItem = ({
                   <span className="py-4 px-2 rounded-lg text-center bg-[#10132E]" />
                 </div>
                 <div className="flex flex-col gap-2 lg:gap-2">
-                <span className="py-4 px-2 rounded-lg text-center bg-[#10132E]" />
+                  <span className="py-4 px-2 rounded-lg text-center bg-[#10132E]" />
                   {["Tailwind", "NodeJs", "JavaScript"].map(
-                    (item) => ( 
+                    (item) => (
                       <span key={item} className="py-1 px-2 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                         {item}
                       </span>
@@ -151,12 +162,12 @@ export const BentoGridItem = ({
                   }} />
                 </div>
                 <MagicButton
-                title={copied ? "Email copied" : "Copy my Email"}
-                icon= {<IoCopyOutline />}
-                position="left"
-                otherClasses="!bg-[#161a31]"
-                handleClick={handlecopy}
-                 />
+                  title={copied ? "Email copied" : "Copy my Email"}
+                  icon={<IoCopyOutline />}
+                  position="left"
+                  otherClasses="!bg-[#161a31]"
+                  handleClick={handlecopy}
+                />
               </div>
             )
           }
