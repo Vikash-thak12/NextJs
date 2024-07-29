@@ -20,9 +20,9 @@ NEXT_PUBLIC_ENDPOINT: ENDPOINT,
 const client = new sdk.Client();
 
 // Ensure all required environment variables are defined
-// if (!PROJECT_ID || !API_KEY || !ENDPOINT) {
-//     throw new Error("Please define PROJECT_ID, API_KEY, and ENDPOINT environment variables");
-// }
+if (!PROJECT_ID || !API_KEY || !ENDPOINT) {
+    throw new Error("Please define PROJECT_ID, API_KEY, and ENDPOINT environment variables");
+}
 
 console.log("PROject ID",PROJECT_ID);
 console.log("API KEY",API_KEY);
