@@ -23,6 +23,7 @@ export enum FormFieldType {
 }
 
 
+// main function 
 const PatientForm = () => {
     const user = "Vikash"
     const router = useRouter()
