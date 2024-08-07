@@ -6,6 +6,7 @@ const Header = ({children}: HeaderProps) => {
     return (
         <div className='header'>
             <Link href='/' className='md:flex-1'>
+// main logo
                 <Image
                     src="/assets/icons/logo.svg"
                     alt='logo with name'
