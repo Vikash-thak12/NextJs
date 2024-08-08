@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div>
       {/* <Button>Click here</Button> */}
-      <h1>Hey This is Vikash Thakur</h1>
+      <h1>Hey This is Home Page</h1>
     </div>
   )
 }
