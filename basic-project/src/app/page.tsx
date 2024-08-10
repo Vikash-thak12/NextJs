@@ -2,7 +2,7 @@
 import { FormEvent, useState } from "react"
 import { useRouter } from 'next/navigation'
 
-
+// main function 
 export default function Home() {
   const [inputval, setInputval] = useState('');
   const { push } = useRouter();
